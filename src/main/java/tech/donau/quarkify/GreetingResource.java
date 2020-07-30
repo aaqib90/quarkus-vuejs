@@ -13,4 +13,9 @@ public class GreetingResource {
     public String hello() {
         return "hello";
     }
+
+    @GET
+    public Response stringLength(@PathParam(value ="name") String name) {
+        Response.ok(name.length()).build();
+    }
 }
